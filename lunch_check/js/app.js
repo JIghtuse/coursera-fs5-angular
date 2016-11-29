@@ -13,6 +13,7 @@ function LunchItemsController($scope) {
         } else {
             var numberOfItems = countNumberOfItems(lunchItems);
             if (numberOfItems == 0) {
+                $scope.conclusion = "Please enter data first";
             } else if (numberOfItems <= 3) {
                 $scope.conclusion = "Enjoy!";
             } else {
@@ -22,7 +23,9 @@ function LunchItemsController($scope) {
     };
 
     function countNumberOfItems(string) {
-        var items = string.split(',');
+        var items = string.split(',').filter(function(item) {
+            return item.trim().length > 0;
+        });
         return items.length;
     }
 };
