@@ -1,0 +1,8 @@
+.container {
+    width: 60em;
+}
+
+.message {
+    font-size: 1.5em;
+    font-weight: bold;
+}
