@@ -12,6 +12,7 @@ function CounterController($scope) {
         setTimeout(function() {
             $scope.counter++;
             console.log("Counter incremented");
+            $scope.$digest();
         }, 2000);
     };
 }
