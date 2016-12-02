@@ -1,0 +1,14 @@
+.container {
+    width: 60em;
+}
+
+.message {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.input-example {
+    border: solid 1px;
+    color: blue;
+    font-family: monospace;
+}
