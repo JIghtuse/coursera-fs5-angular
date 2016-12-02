@@ -9,7 +9,10 @@ function CounterController($scope) {
     $scope.counter = 0;
 
     $scope.upCounter = function() {
-        $scope.counter++;
+        setTimeout(function() {
+            $scope.counter++;
+            console.log("Counter incremented");
+        }, 2000);
     };
 }
 
