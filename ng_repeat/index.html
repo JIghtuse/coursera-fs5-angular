@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en" ng-app="ShoppingListApp">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>ng-repeat</title>
+        <script src="js/angular.min.js"></script>
+        <script src="js/app.js"></script>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <main class="container">
+            <h1 class="text-center">ng-repeat</h1>
+            <div ng-controller="ShoppingListController">
+                <h3>Shopping List</h3>
+                <input type="text" ng-model="search">
+                <ul>
+                    <li ng-repeat="item in shoppingList1 | filter : search">{{ item }}</li>
+                </ul>
+            </div>
+            <div ng-controller="ShoppingListController">
+                <h3>Shopping List</h3>
+                <ul>
+                    <li ng-repeat="item in shoppingList2">Buy {{ item.quantity }} of {{item.name}}(s)</li>
+                </ul>
+            </div>
+            <div ng-controller="ShoppingListController">
+                <h3>Shopping List</h3>
+                <input type="text" ng-model="shoppingList2[0].quantity">
+                <ul>
+                    <li ng-repeat="item in shoppingList2">{{$index + 1}}. Buy {{ item.quantity }} of {{item.name}}(s)</li>
+                </ul>
+                <input type="text" ng-model="newItemName" placeholder="item name">
+                <input type="text" ng-model="newItemQuantity" placeholder="item quantity">
+                <button ng-click="addToList()">Add To List</button>
+            </div>
+        </main>
+    </body>
+</html>
