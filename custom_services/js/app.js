@@ -22,6 +22,9 @@ ShoppingListShowController.$inject = ['ShoppingListService'];
 function ShoppingListShowController(ShoppingListService) {
   var showList = this;
   showList.items = ShoppingListService.getItems();
+  showList.removeItem = function(itemIndex) {
+    ShoppingListService.removeItem(itemIndex);
+  }
 };
 
 function ShoppingListService() {
@@ -37,6 +40,10 @@ function ShoppingListService() {
     };
     items.push(item);
   };
+
+  service.removeItem = function(itemIndex) {
+    items.splice(itemIndex, 1);
+  }
 
   service.getItems = function() {
     return items;
