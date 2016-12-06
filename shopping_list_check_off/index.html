@@ -12,7 +12,8 @@
   <body ng-app="ShoppingListCheckOff">
     <h1 class="text-center">Shopping List</h1>
     <main class="container">
-      <div ng-controller="ToBuyController as toByList">
+      <div ng-controller="ToBuyController as toByList"
+           class="item-list">
         <h2>To Buy:</h2>
         <ul>
           <li ng-repeat="item in toByList.items">
@@ -23,18 +24,27 @@
             </button>
           </li>
         </ul>
+        <div class="item-summary"
+             ng-if="toByList.items.length != 0">
+           {{ toByList.items.length }} items remained
+        </div>
         <div class="emptyMessage"
              ng-if="toByList.items.length == 0">
              Everything is bought!
         </div>
       </div>
-      <div ng-controller="AlreadyBoughtController as boughtList">
+      <div ng-controller="AlreadyBoughtController as boughtList"
+           class="item-list">
         <h2>Already Bought:</h2>
         <ul>
           <li ng-repeat="item in boughtList.items">
             Bought {{ item.quantity }} {{ item.name }}
           </li>
         </ul>
+        <div class="item-summary"
+             ng-if="boughtList.items.length != 0">
+           {{ boughtList.items.length }} items bought
+        </div>
         <div class="emptyMessage"
              ng-if="boughtList.items.length == 0">
              Nothing bought yet.
