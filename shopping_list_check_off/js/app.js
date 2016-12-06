@@ -40,6 +40,22 @@ function ShoppingListCheckOffService() {
     {
       name: "Nutella",
       quantity: 14
+    },
+    {
+      name: "milk",
+      quantity: 2
+    },
+    {
+      name: "chicken",
+      quantity: 3
+    },
+    {
+      name: "cheese",
+      quantity: 5
+    },
+    {
+      name: "bread",
+      quantity: 1
     }
   ];
 
