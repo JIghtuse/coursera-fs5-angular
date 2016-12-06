@@ -1,4 +1,5 @@
 (function() {
+// Minification checks done with https://jscompress.com/
 
 angular.module("ShoppingListCheckOff", [])
 .controller("ToBuyController", ToBuyController)
@@ -73,7 +74,6 @@ function ShoppingListCheckOffService() {
     var item = toByItems[index];
     toByItems.splice(index, 1);
     boughtItems.push(item);
-    console.log(`Bought item ${index}: ${item}`);
   }
 }
 
