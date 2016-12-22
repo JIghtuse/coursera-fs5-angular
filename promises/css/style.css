@@ -1,0 +1,36 @@
+.container {
+  width: 40em;
+  font-size: 1.2em;
+}
+
+.emptyMessage {
+  font-weight: bold;
+  color: red;
+}
+
+.item-list {
+  background-color: #eee;
+  border-radius: 1em;
+  padding: 1em;
+  margin: 1em;
+}
+
+.item-summary {
+  border-top: solid 1px;
+}
+
+h1 {
+  color: blue;
+}
+
+li {
+  margin-bottom: 7px;
+}
+
+li > button {
+  margin-left: 6px;
+}
+
+button > span {
+  color: green;
+}
